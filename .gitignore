@@ -1,5 +1,6 @@
 .DS_Store
 outputs/
+artifacts/eval_dir.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -169,7 +169,7 @@ def main():
     args = parser.parse_args()
 
     # Load prompts from CSV
-    df = pd.read_csv("example.csv", skip_blank_lines=True)
+    df = pd.read_csv("artifacts/example.csv", skip_blank_lines=True)
     
     print(df)
 
@@ -181,6 +181,10 @@ def main():
     
     # Create output directories
     run_dir = create_output_dirs()
+    
+    # Save the run directory to eval_dir.txt
+    with open("artifacts/eval_dir.txt", "w") as f:
+        f.write(str(run_dir))
     
     # Store results
     results = []
